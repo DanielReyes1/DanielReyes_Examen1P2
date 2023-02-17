@@ -54,7 +54,7 @@ public class Escritorio extends Pc{
 
     @Override
     public String toString() {
-        return super.toString()+"\nTipo: "+ tipo+"\nRam: " + capram +"GB"+ "\nAlmacenamiento" + capalmacen + "GB";
+        return super.toString()+"\nTipo: "+ tipo+"\nRam: " + capram +"GB"+ "\nAlmacenamiento: " + capalmacen + "GB";
     }
     
     

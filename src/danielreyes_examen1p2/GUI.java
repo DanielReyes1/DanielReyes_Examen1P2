@@ -12,9 +12,7 @@ public class GUI extends javax.swing.JFrame {
     private ArrayList<Pc> listapc = new ArrayList();
     public GUI() {
         initComponents();
-        for (Pc pc : listapc) {
-            CajaLista.setText(pc.toString());
-        }
+        
     }
 
     /**
@@ -78,7 +76,8 @@ public class GUI extends javax.swing.JFrame {
         PanelListar = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        CajaLista = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        CajaLista = new javax.swing.JTextPane();
         PanelBase = new javax.swing.JPanel();
         textox = new javax.swing.JLabel();
         ButtonEntrarCRUD = new javax.swing.JButton();
@@ -519,34 +518,34 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        CajaLista.setText(" ");
+        jScrollPane1.setViewportView(CajaLista);
 
         javax.swing.GroupLayout PanelListarLayout = new javax.swing.GroupLayout(PanelListar);
         PanelListar.setLayout(PanelListarLayout);
         PanelListarLayout.setHorizontalGroup(
             PanelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelListarLayout.createSequentialGroup()
+                .addGap(347, 347, 347)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelListarLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(159, 159, 159))
-            .addGroup(PanelListarLayout.createSequentialGroup()
                 .addGroup(PanelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelListarLayout.createSequentialGroup()
-                        .addGap(347, 347, 347)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PanelListarLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(CajaLista, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelListarLayout.createSequentialGroup()
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(159, 159, 159))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelListarLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73))))
         );
         PanelListarLayout.setVerticalGroup(
             PanelListarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelListarLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel16)
-                .addGap(52, 52, 52)
-                .addComponent(CajaLista, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
                 .addComponent(jButton1)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
@@ -699,6 +698,12 @@ public class GUI extends javax.swing.JFrame {
                  listapc.add(new Escritorio(Integer.parseInt(fieldram.getText()), Integer.parseInt(fieldalmacen.getText()), fieldtipo.getText(), tarjetagraf, fieldip.getText(), fieldmask.getText(), fieldhostname.getText()));
         } catch (Exception e) {
         }
+        fieldip.setText("");
+        fieldmask.setText("");
+        fieldhostname.setText("");
+        fieldram.setText("");
+        fieldalmacen.setText("");
+        fieldtipo.setText("");
         
         JFrameEscritorio.setVisible(false);
         PanelEscritorio.setVisible(false);
@@ -734,8 +739,11 @@ public class GUI extends javax.swing.JFrame {
         }catch(Exception e){
             
         }
-            
-        
+        fieldmarca.setText("");
+        fielddefpantalla.setText("");
+        fieldip1.setText("");
+        fieldmask1.setText("");
+        fieldhostname1.setText("");
         
         JFrameLaptop.setVisible(false);
         PanelLaptop.setVisible(false);
@@ -750,6 +758,9 @@ public class GUI extends javax.swing.JFrame {
         JFrameCrud.setVisible(false);
         JFrameListar.setVisible(true);
         JFrameListar.setSize(510, 520);
+        
+            CajaLista.setText(listapc.toString());
+        
     }//GEN-LAST:event_ButtonListarMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -803,7 +814,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton ButtonVolver;
     private javax.swing.JButton Buttonagregarescritorio;
     private javax.swing.JButton Buttonagregarlaptop;
-    private javax.swing.JTextField CajaLista;
+    private javax.swing.JTextPane CajaLista;
     private javax.swing.ButtonGroup Grupoboolean;
     private javax.swing.JButton Guardarescritorio;
     private javax.swing.JButton Guardarlaptop;
@@ -853,6 +864,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel textox;
     // End of variables declaration//GEN-END:variables
 }
