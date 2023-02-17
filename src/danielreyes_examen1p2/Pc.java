@@ -42,7 +42,7 @@ public class Pc {
 
     @Override
     public String toString() {
-        return "Host: "+hostname+"\nIp: " + direccionIp + "\nMask: " + mascaraRed ;
+        return "\nHost: "+hostname+"\nIp: " + direccionIp + "\nMask: " + mascaraRed ;
     }
     
     

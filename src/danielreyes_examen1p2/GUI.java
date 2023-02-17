@@ -78,10 +78,16 @@ public class GUI extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         CajaLista = new javax.swing.JTextPane();
+        JFrameEliminar = new javax.swing.JFrame();
+        PanelEliminar = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        Fieldindiceelminar = new javax.swing.JTextField();
+        ButtonEliminarCRUD = new javax.swing.JButton();
         PanelBase = new javax.swing.JPanel();
         textox = new javax.swing.JLabel();
         ButtonEntrarCRUD = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        ButtonIngresarPc = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         PanelCRUD.setBackground(new java.awt.Color(204, 204, 204));
@@ -111,6 +117,11 @@ public class GUI extends javax.swing.JFrame {
         ButtonEliminar.setBackground(new java.awt.Color(0, 0, 0));
         ButtonEliminar.setForeground(new java.awt.Color(255, 255, 255));
         ButtonEliminar.setText("Eliminar");
+        ButtonEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonEliminarMouseClicked(evt);
+            }
+        });
 
         ButtonVolver.setText("Volver");
         ButtonVolver.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -571,6 +582,82 @@ public class GUI extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
+        PanelEliminar.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel18.setFont(new java.awt.Font("Dubai", 1, 36)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Eliminar");
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Ingrese un índice a eliminar de la lista de Pcs");
+
+        ButtonEliminarCRUD.setBackground(new java.awt.Color(255, 204, 204));
+        ButtonEliminarCRUD.setForeground(new java.awt.Color(255, 51, 51));
+        ButtonEliminarCRUD.setText("Eliminar");
+        ButtonEliminarCRUD.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonEliminarCRUDMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelEliminarLayout = new javax.swing.GroupLayout(PanelEliminar);
+        PanelEliminar.setLayout(PanelEliminarLayout);
+        PanelEliminarLayout.setHorizontalGroup(
+            PanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEliminarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(PanelEliminarLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(Fieldindiceelminar, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEliminarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEliminarLayout.createSequentialGroup()
+                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEliminarLayout.createSequentialGroup()
+                        .addComponent(ButtonEliminarCRUD, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41))))
+        );
+        PanelEliminarLayout.setVerticalGroup(
+            PanelEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelEliminarLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47)
+                .addComponent(jLabel19)
+                .addGap(18, 18, 18)
+                .addComponent(Fieldindiceelminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                .addComponent(ButtonEliminarCRUD, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62))
+        );
+
+        javax.swing.GroupLayout JFrameEliminarLayout = new javax.swing.GroupLayout(JFrameEliminar.getContentPane());
+        JFrameEliminar.getContentPane().setLayout(JFrameEliminarLayout);
+        JFrameEliminarLayout.setHorizontalGroup(
+            JFrameEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(JFrameEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JFrameEliminarLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(PanelEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        JFrameEliminarLayout.setVerticalGroup(
+            JFrameEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(JFrameEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JFrameEliminarLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(PanelEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(500, 500));
 
@@ -588,9 +675,14 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Ingresar PC");
+        ButtonIngresarPc.setBackground(new java.awt.Color(0, 0, 0));
+        ButtonIngresarPc.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonIngresarPc.setText("Ingresar PC");
+        ButtonIngresarPc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonIngresarPcMouseClicked(evt);
+            }
+        });
 
         jButton3.setText("Salir");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -611,7 +703,7 @@ public class GUI extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBaseLayout.createSequentialGroup()
                         .addGroup(PanelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ButtonIngresarPc, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ButtonEntrarCRUD, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(112, 112, 112))))
@@ -624,7 +716,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(66, 66, 66)
                 .addComponent(ButtonEntrarCRUD, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonIngresarPc, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(98, Short.MAX_VALUE))
@@ -759,7 +851,7 @@ public class GUI extends javax.swing.JFrame {
         JFrameListar.setVisible(true);
         JFrameListar.setSize(510, 520);
         
-            CajaLista.setText(listapc.toString());
+        CajaLista.setText(listapc.toString());
         
     }//GEN-LAST:event_ButtonListarMouseClicked
 
@@ -770,6 +862,39 @@ public class GUI extends javax.swing.JFrame {
         JFrameListar.setVisible(false);
         JFrameCrud.setSize(510, 520);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void ButtonEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEliminarMouseClicked
+        PanelCRUD.setVisible(false);
+        PanelEliminar.setVisible(true);
+        JFrameCrud.setVisible(false);
+        JFrameEliminar.setVisible(true);
+        JFrameEliminar.setSize(510, 520);
+        
+        
+        
+    }//GEN-LAST:event_ButtonEliminarMouseClicked
+
+    private void ButtonEliminarCRUDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEliminarCRUDMouseClicked
+        int temp;
+        try {
+            temp = Integer.parseInt(Fieldindiceelminar.getText());
+            listapc.remove(temp);
+        } catch (Exception e) {
+        }
+        PanelEliminar.setVisible(false);
+        PanelCRUD.setVisible(true);
+        JFrameEliminar.setVisible(false);
+        JFrameCrud.setVisible(true);
+        JFrameCrud.setSize(510, 520);
+        Fieldindiceelminar.setText("");
+        
+    }//GEN-LAST:event_ButtonEliminarCRUDMouseClicked
+
+    private void ButtonIngresarPcMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonIngresarPcMouseClicked
+        PanelCRUD.setVisible(false);
+        JFrameCrud.setVisible(false);
+        System.out.println("");
+    }//GEN-LAST:event_ButtonIngresarPcMouseClicked
 
     /**
      * @param args the command line arguments
@@ -809,23 +934,28 @@ public class GUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonAgregar;
     private javax.swing.JButton ButtonEliminar;
+    private javax.swing.JButton ButtonEliminarCRUD;
     private javax.swing.JButton ButtonEntrarCRUD;
+    private javax.swing.JButton ButtonIngresarPc;
     private javax.swing.JButton ButtonListar;
     private javax.swing.JButton ButtonVolver;
     private javax.swing.JButton Buttonagregarescritorio;
     private javax.swing.JButton Buttonagregarlaptop;
     private javax.swing.JTextPane CajaLista;
+    private javax.swing.JTextField Fieldindiceelminar;
     private javax.swing.ButtonGroup Grupoboolean;
     private javax.swing.JButton Guardarescritorio;
     private javax.swing.JButton Guardarlaptop;
     private javax.swing.JFrame JFrameAgregar;
     private javax.swing.JFrame JFrameCrud;
+    private javax.swing.JFrame JFrameEliminar;
     private javax.swing.JFrame JFrameEscritorio;
     private javax.swing.JFrame JFrameLaptop;
     private javax.swing.JFrame JFrameListar;
     private javax.swing.JPanel PanelAgregar;
     private javax.swing.JPanel PanelBase;
     private javax.swing.JPanel PanelCRUD;
+    private javax.swing.JPanel PanelEliminar;
     private javax.swing.JPanel PanelEscritorio;
     private javax.swing.JPanel PanelLaptop;
     private javax.swing.JPanel PanelListar;
@@ -845,7 +975,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField fieldram;
     private javax.swing.JTextField fieldtipo;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -856,6 +985,8 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
