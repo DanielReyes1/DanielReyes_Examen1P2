@@ -27,6 +27,7 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Grupoboolean = new javax.swing.ButtonGroup();
         JFrameCrud = new javax.swing.JFrame();
         PanelCRUD = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -34,6 +35,29 @@ public class GUI extends javax.swing.JFrame {
         ButtonListar = new javax.swing.JButton();
         ButtonEliminar = new javax.swing.JButton();
         ButtonVolver = new javax.swing.JButton();
+        JFrameAgregar = new javax.swing.JFrame();
+        PanelAgregar = new javax.swing.JPanel();
+        Buttonagregarescritorio = new javax.swing.JButton();
+        Buttonagregarlaptop = new javax.swing.JButton();
+        JFrameEscritorio = new javax.swing.JFrame();
+        PanelEscritorio = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        buttonsi = new javax.swing.JRadioButton();
+        buttonno = new javax.swing.JRadioButton();
+        Guardarescritorio = new javax.swing.JButton();
         PanelBase = new javax.swing.JPanel();
         textox = new javax.swing.JLabel();
         ButtonEntrarCRUD = new javax.swing.JButton();
@@ -49,6 +73,11 @@ public class GUI extends javax.swing.JFrame {
         ButtonAgregar.setBackground(new java.awt.Color(0, 0, 0));
         ButtonAgregar.setForeground(new java.awt.Color(255, 255, 255));
         ButtonAgregar.setText("Agregar");
+        ButtonAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonAgregarMouseClicked(evt);
+            }
+        });
 
         ButtonListar.setBackground(new java.awt.Color(0, 0, 0));
         ButtonListar.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,7 +106,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(ButtonListar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ButtonEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(ButtonVolver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
         PanelCRUDLayout.setVerticalGroup(
             PanelCRUDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,7 +128,7 @@ public class GUI extends javax.swing.JFrame {
         JFrameCrud.getContentPane().setLayout(JFrameCrudLayout);
         JFrameCrudLayout.setHorizontalGroup(
             JFrameCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(JFrameCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JFrameCrudLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -108,11 +137,206 @@ public class GUI extends javax.swing.JFrame {
         );
         JFrameCrudLayout.setVerticalGroup(
             JFrameCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(JFrameCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(JFrameCrudLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(PanelCRUD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        PanelAgregar.setBackground(new java.awt.Color(204, 204, 204));
+
+        Buttonagregarescritorio.setText("Agregar PC de Escritorio");
+        Buttonagregarescritorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonagregarescritorioActionPerformed(evt);
+            }
+        });
+
+        Buttonagregarlaptop.setText("Agregar Laptop");
+
+        javax.swing.GroupLayout PanelAgregarLayout = new javax.swing.GroupLayout(PanelAgregar);
+        PanelAgregar.setLayout(PanelAgregarLayout);
+        PanelAgregarLayout.setHorizontalGroup(
+            PanelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelAgregarLayout.createSequentialGroup()
+                .addContainerGap(126, Short.MAX_VALUE)
+                .addGroup(PanelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Buttonagregarescritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Buttonagregarlaptop, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(120, 120, 120))
+        );
+        PanelAgregarLayout.setVerticalGroup(
+            PanelAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelAgregarLayout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(Buttonagregarescritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93)
+                .addComponent(Buttonagregarlaptop, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(161, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout JFrameAgregarLayout = new javax.swing.GroupLayout(JFrameAgregar.getContentPane());
+        JFrameAgregar.getContentPane().setLayout(JFrameAgregarLayout);
+        JFrameAgregarLayout.setHorizontalGroup(
+            JFrameAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(JFrameAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JFrameAgregarLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(PanelAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        JFrameAgregarLayout.setVerticalGroup(
+            JFrameAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(JFrameAgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JFrameAgregarLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(PanelAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        PanelEscritorio.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel2.setFont(new java.awt.Font("Dubai", 1, 36)); // NOI18N
+        jLabel2.setText("Agregar Escritorio");
+
+        jLabel3.setText("Host name");
+
+        jLabel4.setText("Mascara de Red");
+
+        jLabel5.setText("Capacidad de RAM");
+
+        jLabel6.setText("Dirreción IP");
+
+        jLabel7.setText("Capacidad de Almacenamiento");
+
+        jLabel8.setText("Tipo de almacen");
+
+        jLabel9.setText("Tarjeta Gráfica");
+
+        buttonsi.setText("Si");
+        buttonsi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonsiMouseClicked(evt);
+            }
+        });
+
+        buttonno.setText("No");
+        buttonno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonnoActionPerformed(evt);
+            }
+        });
+
+        Guardarescritorio.setBackground(new java.awt.Color(153, 255, 153));
+        Guardarescritorio.setText("Guardar");
+        Guardarescritorio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GuardarescritorioMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelEscritorioLayout = new javax.swing.GroupLayout(PanelEscritorio);
+        PanelEscritorio.setLayout(PanelEscritorioLayout);
+        PanelEscritorioLayout.setHorizontalGroup(
+            PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelEscritorioLayout.createSequentialGroup()
+                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelEscritorioLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PanelEscritorioLayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEscritorioLayout.createSequentialGroup()
+                                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(buttonno, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonsi, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(PanelEscritorioLayout.createSequentialGroup()
+                                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(PanelEscritorioLayout.createSequentialGroup()
+                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Guardarescritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(49, 49, 49)))))
+                .addGap(37, 37, 37))
+        );
+        PanelEscritorioLayout.setVerticalGroup(
+            PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelEscritorioLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonsi))
+                .addGap(16, 16, 16)
+                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(buttonno))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Guardarescritorio, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout JFrameEscritorioLayout = new javax.swing.GroupLayout(JFrameEscritorio.getContentPane());
+        JFrameEscritorio.getContentPane().setLayout(JFrameEscritorioLayout);
+        JFrameEscritorioLayout.setHorizontalGroup(
+            JFrameEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(JFrameEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JFrameEscritorioLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(PanelEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        JFrameEscritorioLayout.setVerticalGroup(
+            JFrameEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(JFrameEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JFrameEscritorioLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(PanelEscritorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -205,7 +429,40 @@ public class GUI extends javax.swing.JFrame {
         PanelBase.setVisible(false);
         JFrameCrud.setVisible(true);
         JFrameCrud.setSize(510, 520);
+        
     }//GEN-LAST:event_ButtonEntrarCRUDMouseClicked
+
+    private void ButtonAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAgregarMouseClicked
+        PanelCRUD.setVisible(false);
+        PanelAgregar.setVisible(true);
+        JFrameCrud.setVisible(false);
+        JFrameAgregar.setVisible(true);
+        JFrameAgregar.setSize(510, 520);
+    }//GEN-LAST:event_ButtonAgregarMouseClicked
+
+    private void buttonsiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonsiMouseClicked
+        Grupoboolean.add(buttonsi);
+        
+    }//GEN-LAST:event_buttonsiMouseClicked
+
+    private void buttonnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonnoActionPerformed
+        Grupoboolean.add(buttonno);
+    }//GEN-LAST:event_buttonnoActionPerformed
+
+    private void ButtonagregarescritorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonagregarescritorioActionPerformed
+        JFrameAgregar.setVisible(false);
+        JFrameEscritorio.setVisible(true);
+        PanelEscritorio.setVisible(true);
+        JFrameEscritorio.setSize(510,520);
+    }//GEN-LAST:event_ButtonagregarescritorioActionPerformed
+
+    private void GuardarescritorioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarescritorioMouseClicked
+        JFrameEscritorio.setVisible(false);
+        PanelEscritorio.setVisible(false);
+        JFrameCrud.setVisible(true);
+        JFrameCrud.setSize(510, 520);
+        PanelCRUD.setVisible(true);
+    }//GEN-LAST:event_GuardarescritorioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -248,12 +505,36 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton ButtonEntrarCRUD;
     private javax.swing.JButton ButtonListar;
     private javax.swing.JButton ButtonVolver;
+    private javax.swing.JButton Buttonagregarescritorio;
+    private javax.swing.JButton Buttonagregarlaptop;
+    private javax.swing.ButtonGroup Grupoboolean;
+    private javax.swing.JButton Guardarescritorio;
+    private javax.swing.JFrame JFrameAgregar;
     private javax.swing.JFrame JFrameCrud;
+    private javax.swing.JFrame JFrameEscritorio;
+    private javax.swing.JPanel PanelAgregar;
     private javax.swing.JPanel PanelBase;
     private javax.swing.JPanel PanelCRUD;
+    private javax.swing.JPanel PanelEscritorio;
+    private javax.swing.JRadioButton buttonno;
+    private javax.swing.JRadioButton buttonsi;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
     private javax.swing.JLabel textox;
     // End of variables declaration//GEN-END:variables
 }
