@@ -2,6 +2,8 @@
 package danielreyes_examen1p2;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+import javax.swing.JFrame;
 
 /**
  *
@@ -891,9 +893,59 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonEliminarCRUDMouseClicked
 
     private void ButtonIngresarPcMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonIngresarPcMouseClicked
-        PanelCRUD.setVisible(false);
-        JFrameCrud.setVisible(false);
-        System.out.println("");
+        Scanner leer = new Scanner(System.in);
+        boolean b = false;
+        PanelBase.setVisible(false);
+        System.out.println("PC a ingresar a la consola");
+        for (Pc pc : listapc) {
+            System.out.println(""+listapc.indexOf(pc)+"- "+ pc);
+        }
+        System.out.println("Ingrese el indice de su PC: ");
+        int indice = leer.nextInt();
+        do{
+            if(listapc.size() > indice && indice >= 0){
+                b = true;
+            }else{
+                b = false;
+                System.out.println("Esa PC no existe");
+                System.out.println("Ingrese el indice de su PC: ");
+                indice = leer.nextInt();
+            }
+        
+        }while(b != true);
+        do{
+            b= false;
+            System.out.print(listapc.get(indice).getHostname() + "#");
+            String comando = leer.next();
+            
+            System.out.println("");
+            System.out.println("Pinging to "+listapc.get(indice).getDireccionIp()+" with 32 bits of data: ");
+            
+            if(comando.equals("show")){
+                System.out.println("Ip: "+ listapc.get(indice).getDireccionIp()+"\nMask: "+ listapc.get(indice).getMascaraRed());
+                b = false;
+            }else if(comando.equals("exit")){
+                System.out.println("Saliendo de la consola, devolviendo al GUI...");
+                b = true;
+            }else{
+                String nuevoip="";
+                for (int i = 0; i < comando.length(); i++) {
+                    if(i >= 5){
+                        nuevoip+= comando.charAt(i);
+                    }
+                }
+                for (Pc p : listapc) {
+                    if(p.getDireccionIp().equals(nuevoip)){
+                        System.out.println("ping exitoso");
+                    }
+                }
+            }
+                
+            
+        
+        }while(b !=true);
+        PanelBase.setVisible(true);
+        
     }//GEN-LAST:event_ButtonIngresarPcMouseClicked
 
     /**
