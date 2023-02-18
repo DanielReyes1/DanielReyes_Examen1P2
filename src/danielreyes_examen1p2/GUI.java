@@ -3,7 +3,7 @@ package danielreyes_examen1p2;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import javax.swing.JFrame;
+
 
 /**
  *
@@ -914,6 +914,7 @@ public class GUI extends javax.swing.JFrame {
         
         }while(b != true);
         do{
+            int verifier=0;
             b= false;
             System.out.print(listapc.get(indice).getHostname() + "#");
             String comando = leer.next();
@@ -936,8 +937,80 @@ public class GUI extends javax.swing.JFrame {
                 }
                 for (Pc p : listapc) {
                     if(p.getDireccionIp().equals(nuevoip)){
-                        System.out.println("ping exitoso");
+                        //System.out.println("ping exitoso");
+                        verifier++;
+                        
+                        String bi="";
+                        bi = listapc.get(indice).getDireccionIp().split("\\.")[3];
+                        // binario ip
+                        int ipbinariotemp =Integer.parseInt(bi);
+                        int modulo;
+                        String ipbinario="";
+                        while(ipbinariotemp>0){
+                            modulo = ipbinariotemp%2;
+                            ipbinario = modulo+ ipbinario;
+                            ipbinariotemp = ipbinariotemp/2;
+                        }
+                        String bm ="";
+                        bm = listapc.get(indice).getMascaraRed().split("\\.")[3];
+                        //binario mask
+                        int maskbinariotemp = Integer.parseInt(bm);
+                        int modulo2;
+                        String maskbinario="";
+                        while(maskbinariotemp>0){
+                            modulo2 = maskbinariotemp%2;
+                            maskbinario = modulo2+maskbinario;
+                            maskbinariotemp= maskbinariotemp/2;
+                        }
+                        String bi2="";
+                        bi2 = p.getDireccionIp().split("\\.")[3];
+                        //binario ip 2
+                        int ipbinariotemp2 = Integer.parseInt(bi2);
+                        int modulo3;
+                        String ipbinario2="";
+                        while(ipbinariotemp2>0){
+                            modulo3 = ipbinariotemp2%2;
+                            ipbinario2 = modulo3+ ipbinario2;
+                            ipbinariotemp2 = ipbinariotemp2/2;
+                        }
+                        //comprobar
+                        int contaunos=0;
+                        String ip1="";
+                        String ip2="";
+                        for (int i = 0; i < maskbinario.length(); i++) {
+                            if(maskbinario.charAt(i)== '1'){
+                                contaunos++;
+                            }else{
+                                break;
+                            }
+                        }
+                        for (int i = 0; i < contaunos; i++) {
+                            ip1 += ipbinario.charAt(i);
+                        }
+                        for (int i = 0; i < contaunos; i++) {
+                            ip2 += ipbinario2.charAt(i);
+                        }
+//                        System.out.println(ipbinario);
+//                        System.out.println(ipbinario2);
+//                        System.out.println(maskbinario);
+//                        System.out.println(ip1);
+//                        System.out.println(ip2);
+                        if(ip1.equals(ip2)){
+                            for (int i = 0; i < 4; i++) {
+                                System.out.println("Reply from "+ p.getDireccionIp() +": "+ "Ping exitoso");
+                            }
+                        }else{
+                            for (int i = 0; i < 4; i++) {
+                                System.out.println("Reply from "+ p.getDireccionIp()+": "+ " Destination host unreachable");
+                            }
+                        }
                     }
+                    
+                }
+                if(verifier == 0){
+                    for (int i = 0; i < 4; i++) {
+                            System.out.println("Request timed out");
+                        }
                 }
             }
                 
