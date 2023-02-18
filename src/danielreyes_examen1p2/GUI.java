@@ -26,6 +26,7 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         Grupoboolean = new javax.swing.ButtonGroup();
         JFrameCrud = new javax.swing.JFrame();
         PanelCRUD = new javax.swing.JPanel();
@@ -408,6 +409,11 @@ public class GUI extends javax.swing.JFrame {
         });
 
         buttonno1.setText("No");
+        buttonno1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonno1MouseClicked(evt);
+            }
+        });
         buttonno1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonno1ActionPerformed(evt);
@@ -814,7 +820,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonagregarlaptopMouseClicked
 
     private void buttonsi1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonsi1MouseClicked
-        // TODO add your handling code here:
+        buttonGroup1.add(buttonsi1);
     }//GEN-LAST:event_buttonsi1MouseClicked
 
     private void buttonno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonno1ActionPerformed
@@ -1021,6 +1027,10 @@ public class GUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_ButtonIngresarPcMouseClicked
 
+    private void buttonno1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonno1MouseClicked
+        buttonGroup1.add(buttonno1);
+    }//GEN-LAST:event_buttonno1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1084,6 +1094,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel PanelEscritorio;
     private javax.swing.JPanel PanelLaptop;
     private javax.swing.JPanel PanelListar;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton buttonno;
     private javax.swing.JRadioButton buttonno1;
     private javax.swing.JRadioButton buttonsi;

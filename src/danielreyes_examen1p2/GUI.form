@@ -2,6 +2,8 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
     <Component class="javax.swing.ButtonGroup" name="Grupoboolean">
     </Component>
     <Container class="javax.swing.JFrame" name="JFrameCrud">
@@ -633,6 +635,7 @@
                 <Property name="text" type="java.lang.String" value="No"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonno1MouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonno1ActionPerformed"/>
               </Events>
             </Component>
