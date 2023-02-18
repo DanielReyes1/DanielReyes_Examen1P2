@@ -93,7 +93,7 @@ public class GUI extends javax.swing.JFrame {
         ButtonIngresarPc = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
-        PanelCRUD.setBackground(new java.awt.Color(204, 204, 204));
+        PanelCRUD.setBackground(new java.awt.Color(255, 102, 102));
         PanelCRUD.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jLabel1.setFont(new java.awt.Font("Dubai", 1, 36)); // NOI18N
@@ -184,8 +184,10 @@ public class GUI extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        PanelAgregar.setBackground(new java.awt.Color(204, 204, 204));
+        PanelAgregar.setBackground(new java.awt.Color(255, 255, 0));
 
+        Buttonagregarescritorio.setBackground(new java.awt.Color(0, 0, 0));
+        Buttonagregarescritorio.setForeground(new java.awt.Color(255, 255, 255));
         Buttonagregarescritorio.setText("Agregar PC de Escritorio");
         Buttonagregarescritorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,6 +195,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        Buttonagregarlaptop.setBackground(new java.awt.Color(0, 0, 0));
+        Buttonagregarlaptop.setForeground(new java.awt.Color(255, 255, 255));
         Buttonagregarlaptop.setText("Agregar Laptop");
         Buttonagregarlaptop.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -242,7 +246,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        PanelEscritorio.setBackground(new java.awt.Color(204, 204, 204));
+        PanelEscritorio.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Dubai", 1, 36)); // NOI18N
         jLabel2.setText("Agregar Escritorio");
@@ -384,7 +388,7 @@ public class GUI extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        PanelLaptop.setBackground(new java.awt.Color(204, 204, 204));
+        PanelLaptop.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel10.setFont(new java.awt.Font("Dubai", 1, 36)); // NOI18N
         jLabel10.setText("Agregar Laptop");
@@ -669,7 +673,7 @@ public class GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(500, 500));
 
-        PanelBase.setBackground(new java.awt.Color(204, 204, 204));
+        PanelBase.setBackground(new java.awt.Color(204, 255, 204));
 
         textox.setFont(new java.awt.Font("Dubai", 1, 36)); // NOI18N
         textox.setText("Examen 1-P2 Daniel Reyes");
@@ -703,31 +707,31 @@ public class GUI extends javax.swing.JFrame {
         PanelBase.setLayout(PanelBaseLayout);
         PanelBaseLayout.setHorizontalGroup(
             PanelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBaseLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+            .addGroup(PanelBaseLayout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addGroup(PanelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBaseLayout.createSequentialGroup()
-                        .addComponent(textox, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBaseLayout.createSequentialGroup()
                         .addGroup(PanelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ButtonIngresarPc, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ButtonEntrarCRUD, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(112, 112, 112))))
+                        .addGap(151, 151, 151))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBaseLayout.createSequentialGroup()
+                        .addComponent(textox, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))))
         );
         PanelBaseLayout.setVerticalGroup(
             PanelBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelBaseLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(textox, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
+                .addGap(55, 55, 55)
                 .addComponent(ButtonEntrarCRUD, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
                 .addComponent(ButtonIngresarPc, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -996,11 +1000,11 @@ public class GUI extends javax.swing.JFrame {
                         for (int i = 0; i < contaunos; i++) {
                             ip2 += ipbinario2.charAt(i);
                         }
-//                        System.out.println(ipbinario);
-//                        System.out.println(ipbinario2);
-//                        System.out.println(maskbinario);
-//                        System.out.println(ip1);
-//                        System.out.println(ip2);
+                        System.out.println(ipbinario);
+                        System.out.println(ipbinario2);
+                        System.out.println(maskbinario);
+                        System.out.println(ip1);
+                        System.out.println(ip2);
                         if(ip1.equals(ip2)){
                             for (int i = 0; i < 4; i++) {
                                 System.out.println("Reply from "+ p.getDireccionIp() +": "+ "Ping exitoso");
